@@ -9,7 +9,7 @@ class GiphyService {
   }
 
   getGifs(query) {
-    return axios.get(`${this.scriptUrl}?q=${query}&api_key=${this.key}&limit=5`)
+    return axios.get(`${this.scriptUrl}?q=${query}&api_key=${this.key}&limit=10`)
       .then((response) => {
         if (response.status === 200) {
           return response.data.data.map(gif => ({

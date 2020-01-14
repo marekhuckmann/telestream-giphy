@@ -11,6 +11,11 @@
         :gif="gif"
         class="app__gif"
       />
+      <img
+        class="app__attribution-mark"
+        alt="Giphy attribution mark"
+        src="./assets/poweredByGiphy.png"
+      >
     </div>
     <FavoriteGifs class="app__favorite-gifs" />
   </div>
@@ -75,14 +80,22 @@ body {
   }
 
   &__gifs {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 220px;
+    margin-bottom: 220px;
+    padding: 40px;
   }
 
   &__gif {
     margin: 10px;
+  }
+
+  &__attribution-mark {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
 
   &__favorite-gifs {
